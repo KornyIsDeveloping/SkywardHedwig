@@ -11,3 +11,4 @@ centered = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 115, 427 )
+gravity_scale = 0.0
