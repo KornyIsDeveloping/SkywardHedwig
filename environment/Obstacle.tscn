@@ -4,7 +4,7 @@
 [ext_resource path="res://environment/Obstacle.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 83 )
+extents = Vector2( 11.5, 83 )
 
 [node name="Obstacle" type="Node2D"]
 position = Vector2( 0, 427 )
@@ -21,4 +21,9 @@ rotation = 3.14159
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreArea"]
 visible = false
+position = Vector2( 0.5, 0 )
 shape = SubResource( 1 )
+
+[connection signal="body_entered" from="TreeTrunk" to="." method="_on_TreeTrunk_body_entered"]
+[connection signal="body_entered" from="TreeTrunk2" to="." method="_on_TreeTrunk_body_entered"]
+[connection signal="body_exited" from="ScoreArea" to="." method="_on_ScoreArea_body_exited"]

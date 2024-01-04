@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Player
 
 export var FLY_FORCE = -200
 const MAX_ROTATION_DEGREES = -30.0
