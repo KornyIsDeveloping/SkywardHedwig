@@ -1,13 +1,17 @@
 extends RigidBody2D
+
+signal died
+
 class_name Player
 
 export var FLY_FORCE = -200
 const MAX_ROTATION_DEGREES = -30.0
 onready var animator = $AnimationPlayer
 var started = false
+var alive = true
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("fly"):
+	if Input.is_action_just_pressed("fly") && alive:
 		if !started:
 			start()
 		fly()
@@ -32,3 +36,9 @@ func start():
 func fly():
 	linear_velocity.y = FLY_FORCE
 	angular_velocity = -8.0
+	
+func die():
+	if !alive: return
+	alive = false
+	animator.stop()
+	emit_signal("died")

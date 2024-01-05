@@ -43,7 +43,6 @@ texture = ExtResource( 1 )
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 240, 84.5 )
 shape = SubResource( 1 )
 
@@ -52,3 +51,9 @@ autoplay = "wallScroll"
 playback_speed = 0.8
 anims/RESET = SubResource( 2 )
 anims/wallScroll = SubResource( 3 )
+
+[node name="DeathZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2( 240, 84 )
+shape = SubResource( 1 )
