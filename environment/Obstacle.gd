@@ -1,8 +1,8 @@
 extends Node2D
 
-const SPEED = 300
-
 signal score
+
+const SPEED = 300
 
 func _physics_process(delta):
 	position.x += -SPEED * delta
