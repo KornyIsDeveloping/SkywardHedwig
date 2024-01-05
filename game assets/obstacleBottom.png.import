@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tree.png-a30ca7ea147dc52dd88f2fb0d5f93f2a.stex"
+path="res://.import/obstacleBottom.png-0400dd775d18c7c44a9c6ab42a3c2770.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game assets/tree.png"
-dest_files=[ "res://.import/tree.png-a30ca7ea147dc52dd88f2fb0d5f93f2a.stex" ]
+source_file="res://game assets/obstacleBottom.png"
+dest_files=[ "res://.import/obstacleBottom.png-0400dd775d18c7c44a9c6ab42a3c2770.stex" ]
 
 [params]
 
