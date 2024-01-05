@@ -26,9 +26,10 @@ position = Vector2( 800, 0 )
 position = Vector2( 0, 715 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 115, 427 )
+position = Vector2( 80, 427 )
 gravity_scale = 0.0
 
+[connection signal="game_start" from="MenuLayer" to="." method="_on_MenuLayer_game_start"]
 [connection signal="body_entered" from="Ground/DeathZone" to="." method="_on_DeathZone_body_entered"]
 [connection signal="died" from="Player" to="." method="_on_Player_died"]
 
