@@ -3,6 +3,7 @@ extends Node2D
 onready var hud = $HUD
 onready var obstacle_spawner = $ObstacleSpawner
 onready var ground = $Ground
+onready var menu_layer = $MenuLayer
 
 const SAVE_FILE_PATH = "user://savedata.save"
 
@@ -41,6 +42,7 @@ func game_over():
 	obstacle_spawner.stop()
 	ground.get_node("AnimationPlayer").stop()
 	get_tree().call_group("obstacles", "set_physics_process", false)
+	menu_layer.init_game_over_menu(score)
 
 
 func _on_MenuLayer_game_start():
