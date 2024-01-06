@@ -20,14 +20,18 @@ _global_script_class_icons={
 
 [application]
 
-config/name="SkywardHedwig"
+config/name="Skyward Hedwig"
+config/description="A nice game inspired from the Harry Potter Universe."
 run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://game assets/StartMenuTitle.png"
+boot_splash/bg_color=Color( 0.0117647, 0.00784314, 0, 1 )
+config/icon="res://game assets/StartMenuTitle.png"
 
 [display]
 
 window/size/width=480
 window/size/height=854
+window/size/fullscreen=true
 window/handheld/orientation="portrait"
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
@@ -68,7 +72,7 @@ texture={
 
 fly={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 
