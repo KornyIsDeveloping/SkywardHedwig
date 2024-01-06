@@ -23,9 +23,9 @@ _global_script_class_icons={
 config/name="Skyward Hedwig"
 config/description="A nice game inspired from the Harry Potter Universe."
 run/main_scene="res://World.tscn"
-boot_splash/image="res://game assets/StartMenuTitle.png"
-boot_splash/bg_color=Color( 0.0117647, 0.00784314, 0, 1 )
-config/icon="res://game assets/StartMenuTitle.png"
+boot_splash/image="res://game assets/character.png"
+boot_splash/bg_color=Color( 0.00392157, 0.027451, 0.0352941, 1 )
+config/icon="res://game assets/character.png"
 
 [display]
 
