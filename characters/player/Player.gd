@@ -7,6 +7,9 @@ class_name Player
 export var FLY_FORCE = -200
 const MAX_ROTATION_DEGREES = -30.0
 onready var animator = $AnimationPlayer
+onready var hit = $Hit
+onready var wing = $Wing
+
 var started = false
 var alive = true
 
@@ -36,9 +39,11 @@ func start():
 func fly():
 	linear_velocity.y = FLY_FORCE
 	angular_velocity = -8.0
+	wing.play()
 	
 func die():
 	if !alive: return
 	alive = false
 	animator.stop()
+	hit.play()
 	emit_signal("died")

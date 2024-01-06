@@ -12,7 +12,8 @@ var highscore = 0
 
 func _ready():
 	obstacle_spawner.connect("obstacle_created", self, "_on_obstacle_created")
-	new_game()
+	load_highscore()
+	
 	
 func new_game():
 	self.score = 0
@@ -42,8 +43,27 @@ func game_over():
 	obstacle_spawner.stop()
 	ground.get_node("AnimationPlayer").stop()
 	get_tree().call_group("obstacles", "set_physics_process", false)
-	menu_layer.init_game_over_menu(score)
+	
+	if score > highscore:
+		highscore = score
+		save_highscore()
+	
+	menu_layer.init_game_over_menu(score, highscore)
 
 
 func _on_MenuLayer_game_start():
 	new_game()
+
+
+func save_highscore():
+	var save_data = File.new()
+	save_data.open(SAVE_FILE_PATH, File.WRITE)
+	save_data.store_var(highscore)
+	save_data.close()
+	
+func load_highscore():
+	var save_data = File.new()
+	if save_data.file_exists(SAVE_FILE_PATH):
+		save_data.open(SAVE_FILE_PATH, File.READ)
+		highscore = save_data.get_var()
+		save_data.close()
