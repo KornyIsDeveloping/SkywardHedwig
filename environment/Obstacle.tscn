@@ -2,7 +2,7 @@
 
 [ext_resource path="res://environment/TreeTrunk.tscn" type="PackedScene" id=1]
 [ext_resource path="res://environment/Obstacle.gd" type="Script" id=2]
-[ext_resource path="res://game assets/obstacleTop.png" type="Texture" id=3]
+[ext_resource path="res://game assets/obstacleTop.png" type="Texture2D" id=3]
 [ext_resource path="res://game assets/audio/point.wav" type="AudioStream" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -19,7 +19,7 @@ position = Vector2( 0, 55 )
 position = Vector2( 0, -55 )
 rotation = 3.14159
 
-[node name="ObstacleTop" type="Sprite" parent="TreeTrunk2"]
+[node name="ObstacleTop" type="Sprite2D" parent="TreeTrunk2"]
 position = Vector2( 0.164011, 317.925 )
 rotation = 3.14159
 scale = Vector2( 0.649966, 1.33638 )

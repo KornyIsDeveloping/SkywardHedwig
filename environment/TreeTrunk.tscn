@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://game assets/obstacleBottom.png" type="Texture" id=1]
+[ext_resource path="res://game assets/obstacleBottom.png" type="Texture2D" id=1]
 
 [node name="TreeTrunk" type="Area2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2( 0, 318 )
 scale = Vector2( 0.221154, 0.445458 )
 texture = ExtResource( 1 )
@@ -13,4 +13,4 @@ texture = ExtResource( 1 )
 visible = false
 position = Vector2( 1.19209e-07, 1 )
 scale = Vector2( 0.227068, 0.441357 )
-polygon = PoolVector2Array( -114, 39, -88, 18, -67, 10, -39, 4, -22, 2, 34, 2, 61, 9, 87, 18, 104, 32, 114, 41, 114, 1428, -114, 1428 )
+polygon = PackedVector2Array( -114, 39, -88, 18, -67, 10, -39, 4, -22, 2, 34, 2, 61, 9, 87, 18, 104, 32, 114, 41, 114, 1428, -114, 1428 )

@@ -2,7 +2,7 @@ extends Node2D
 
 signal score
 
-onready var point = $Point
+@onready var point = $Point
 
 const SPEED = 200
 

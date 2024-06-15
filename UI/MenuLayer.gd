@@ -2,11 +2,11 @@ extends CanvasLayer
 
 signal game_start
 
-onready var start_message = $StartMenu/StartMessage
-onready var tween = $Tween
-onready var score_label = $GameOverMenu/VBoxContainer/ScoreLabel
-onready var high_score_label = $GameOverMenu/VBoxContainer/HighScoreLabel
-onready var game_over_menu = $GameOverMenu
+@onready var start_message = $StartMenu/StartMessage
+@onready var tween = $Tween
+@onready var score_label = $GameOverMenu/VBoxContainer/ScoreLabel
+@onready var high_score_label = $GameOverMenu/VBoxContainer/HighScoreLabel
+@onready var game_over_menu = $GameOverMenu
 
 var game_started = false
 

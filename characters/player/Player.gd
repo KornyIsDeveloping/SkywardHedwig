@@ -4,11 +4,11 @@ signal died
 
 class_name Player
 
-export var FLY_FORCE = -200
+@export var FLY_FORCE = -200
 const MAX_ROTATION_DEGREES = -30.0
-onready var animator = $AnimationPlayer
-onready var hit = $Hit
-onready var wing = $Wing
+@onready var animator = $AnimationPlayer
+@onready var hit = $Hit
+@onready var wing = $Wing
 
 var started = false
 var alive = true

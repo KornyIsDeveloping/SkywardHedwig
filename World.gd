@@ -1,17 +1,17 @@
 extends Node2D
 
-onready var hud = $HUD
-onready var obstacle_spawner = $ObstacleSpawner
-onready var ground = $Ground
-onready var menu_layer = $MenuLayer
+@onready var hud = $HUD
+@onready var obstacle_spawner = $ObstacleSpawner
+@onready var ground = $Ground
+@onready var menu_layer = $MenuLayer
 
 const SAVE_FILE_PATH = "user://savedata.save"
 
-var score = 0 setget set_score
+var score = 0: set = set_score
 var highscore = 0
 
 func _ready():
-	obstacle_spawner.connect("obstacle_created", self, "_on_obstacle_created")
+	obstacle_spawner.connect("obstacle_created", Callable(self, "_on_obstacle_created"))
 	load_highscore()
 	
 	
@@ -27,7 +27,7 @@ func set_score(new_score):
 	hud.update_score(score)
 
 func _on_obstacle_created(obs):
-	obs.connect("score", self, "player_score")	
+	obs.connect("score", Callable(self, "player_score"))	
 
 
 
